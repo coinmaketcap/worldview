@@ -10,7 +10,7 @@ export function animationUi(models, ui) {
   var animModel = models.anim;
   var queueLength;
   var zooms = ['year', 'month', 'day'];
-  var queue = new Queue(5, Infinity);
+  var queue = new Queue(50, Infinity);
   var preload = {};
   var preloadArray;
   var inQueue;
@@ -82,7 +82,7 @@ export function animationUi(models, ui) {
     preload = {};
     pastDates = {};
     inQueue = {};
-    queueLength = 500;
+    queueLength = 10;
     self.state = {
       playing: false,
       playIndex: self.getStartDate(),
